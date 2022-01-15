@@ -6,18 +6,16 @@
 
 <script>
 import ListItem from "../components/ListItem.vue"
-// import { mapGetters } from 'vuex'
+import ListMixin from '../mixins/ListMixin'
+// import bus from '../utils/bus.js'
+
 export default {
   components: {
     ListItem
-  }
-  // computed: {
-  //   ...mapGetters([
-  //     'fetchedAsk'
-  //   ]),
-  // },
-  // created () {
-  //   this.$store.dispatch('FETCH_ASK')
+  },
+  // mounted() {
+  //   bus.$emit('end:spinner')
   // }
+  mixins: [ListMixin]
 }
 </script>
